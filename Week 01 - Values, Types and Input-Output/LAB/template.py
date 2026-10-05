@@ -2,12 +2,11 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :keshav
+Lane  :  AI
+Date  : 5 oct 2026
 
 Run it:   python template.py
-
 Work through the numbered sections in order. Each one tells you what it must do.
 Delete these instructions as you replace them with your code.
 """
@@ -21,9 +20,9 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+label = input("hostname : ")      # : replace with an input() call
+first = float(input("gb used : "))    # : replace with an input() call, converted
+second = float(input("gb total : "))    # : replace with an input() call, converted
 
 
 # ================================================================== PROCESS
@@ -34,8 +33,8 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+difference = first - second   # 
+percent = (first / second) * 100      # 
 
 
 # =================================================================== OUTPUT
@@ -55,6 +54,12 @@ print("=" * 34)
 
 # : your report lines go here
 
+print("=" * 34)
+print(f" used : {first:>10.2f} ")
+print(f" total : {second:>10.2f} ")
+print(f" difference : {difference:>+10.2f} ")
+print(f" of total : {percent:>9.1f} % ")
+print(f" free : {second - first:>10.2f} ")
 print("=" * 34)
 
 
